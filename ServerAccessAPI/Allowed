@@ -1,0 +1,29 @@
+--[[
+	MegaDrexl's ServerAccess API
+	
+  MAKE THIS A MODULE SCRIPT WITH THE NAME "Allowed"
+  PUT THIS UNDER MAIN
+  
+	Warning: Beware of the people asking for access, they could be exploiters.
+	Give access strictly to developers and/or owners and co-owners only.
+	
+	Documentation:
+	
+	This API is made by: MegaDrexl
+	If you are accessing this script without being invited into the private discord server,
+	You are an unauthorized user, and can be reported to Roblox staff for stealing assets.
+	
+	Script Function:
+	This script is simply a list of allowed people into ServerAccess.
+--]]
+
+local list = {
+	'251987734', --MegaDrexl
+	 '53981661', --MinecraftBuilder05
+	 '89599577', --RayGlory
+	 '403165706', --Wippd
+	 '36236989' --Ceaton6
+	
+}
+
+return list
