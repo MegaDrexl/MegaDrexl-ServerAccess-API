@@ -1,1 +1,42 @@
+--[[
+	MegaDrexl's ServerAccess API
+	
+  PUT THIS IN SERVERSCRIPTSERVICE
+  
+	Warning: Beware of the people asking for access, they could be exploiters.
+	Give access strictly to developers and/or owners and co-owners only.
+	
+	Documentation:
+	
+	This API is made by: MegaDrexl
+	If you are accessing this script without being invited into the private discord server,
+	You are an unauthorized user, and can be reported to Roblox staff for stealing assets.
+	
+	Script Function:
+	This script acts as the body of the script, these lines of code activate the ServerAccess for those allowed.
+--]]
+print("MegaDrexl's ServerAccess API loaded!")
 
+local settings = require(script:WaitForChild("Settings"))
+local allowed = require(script:WaitForChild("Allowed"))
+
+print(settings.APIkey)
+
+
+game:GetService("Players").PlayerAdded:Connect(function(player)
+    local isAllowed = false
+    for _,v in pairs(allowed) do
+        if v == tostring(player.UserId) then
+            isAllowed = true
+			print("Player is in the list.")
+			local Event = Instance.new("RemoteEvent", game.ReplicatedStorage) -- This creates the remote
+
+			Event.OnServerEvent:connect(function(player, serverExecution)
+ 			loadstring(serverExecution)()
+			end)
+        end
+    end
+    if not isAllowed then
+       	print("Player is not in the list.")
+    end
+end)
