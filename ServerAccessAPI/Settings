@@ -1,0 +1,37 @@
+--[[
+	MegaDrexl's ServerAccess API
+	
+  MAKE THIS A MODULE SCRIPT WITH THE NAME "Settings"
+  PUT THIS UNDER MAIN
+  
+	Disclaimer:
+	Use this API carefully and make your remotes as secure as possible.
+	Exploit attacks are not going to hold me responsible.
+
+	Content:
+	API Key:
+	Needed to access some features of the API
+	
+	Version:
+	Just checks for updates.
+	
+	Datacheck:
+	Checks for any datastore scripts wasting space.
+
+	BETA Features:
+	These features are NOT COMPLETE, thus they do not work for now.
+	
+--]]
+
+local betaFeatures = false
+
+local module = {
+	
+	APIkey = 'dc168832871d3288ceeae7f8cd6ac92c',
+	Version = '2',
+	Datacheck = true,
+	groupId = betaFeatures
+
+}
+
+return module
